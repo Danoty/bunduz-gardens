@@ -223,7 +223,7 @@
 
         /* Sections & Cards */
         main {
-            padding-top: 60px; /* to clear fixed navbar */
+            padding-top: 60px;
         }
 
         section {
@@ -458,7 +458,7 @@
 
         @media (max-width: 700px) {
             .navbar nav {
-                display: none; /* simple mobile version (can be improved later) */
+                display: none;
             }
             .gallery-grid img {
                 width: 47%;
@@ -573,26 +573,26 @@
             <div>
                 <strong>Garden Entry</strong>
                 <span>Enjoy access to the garden, views and relaxation space.</span><br>
-                <b>FREE</b>
+                <b>KES FREE</b>
             </div>
             <div>
                 <strong>Photoshoot Session</strong>
                 <span>Perfect for birthdays, fashion, couples and content creators.</span><br>
-                <b>AVAILABLE</b>
+                <b>Offers available</b>
             </div>
             <div>
                 <strong>Private Event (Up to 20 pax)</strong>
                 <span>Small celebrations, hangouts, proposals or private gatherings.</span><br>
-                <b>AVAILABLE</b>
+                <b>Offer available</b>
             </div>
             <div>
                 <strong>Night Chill Spot (Couples)</strong>
                 <span>Cozy, quiet and romantic night garden experience.</span><br>
-                <b>AVAILABLE</b>
+                <b>Available</b>
             </div>
         </div>
         <p class="muted">
-            For custom setups, decorations or larger events, kindly contact us directly for a tailored quote.
+            For detailed offers and customised packages, kindly contact us directly on WhatsApp.
         </p>
     </section>
 
@@ -613,304 +613,4 @@
     <section id="order" class="card">
         <h2>Order & Enjoy With Glovo</h2>
         <p>
-            Enjoy your time at Bunduz Bondo Gardens with snacks, drinks and food ordered conveniently through delivery platforms like
-            <strong>Glovo</strong>.
-        </p>
-        <p class="muted">
-            While you relax at the garden, you can use Glovo to have food and drinks delivered to you from your favourite restaurants in Bondo*.
-        </p>
-        <div class="contact-actions">
-            <!-- Replace this link with your actual Glovo store link when available -->
-            <a class="btn btn-glovo" href="https://glovoapp.com" target="_blank" rel="noopener noreferrer">Open Glovo App</a>
-            <a class="btn" href="https://wa.me/254769285959" target="_blank" rel="noopener noreferrer">Talk to Us on WhatsApp</a>
-        </div>
-        <p class="muted" style="margin-top:10px;">
-            *Subject to Glovo coverage and available restaurants in your area.
-        </p>
-    </section>
-
-    <!-- WORLD CLOCKS + WEATHER -->
-    <section id="worldtime" class="card">
-        <h2>World Time & Weather</h2>
-        <p class="muted">
-            Bunduz Bondo Gardens welcomes guests and friends from around the world.  
-            See live time and simple weather notes in key global cities.
-        </p>
-
-        <div class="world-clock-grid">
-
-            <!-- Nairobi -->
-            <div class="clock-card">
-                <div class="clock-header">
-                    <span class="clock-flag">🇰🇪</span>
-                    <div class="clock-city">Nairobi, Kenya</div>
-                </div>
-                <div class="clock-time" data-timezone="Africa/Nairobi"></div>
-                <div class="clock-label">East Africa Time</div>
-                <div class="clock-weather" data-city="Nairobi"></div>
-            </div>
-
-            <!-- New York -->
-            <div class="clock-card">
-                <div class="clock-header">
-                    <span class="clock-flag">🇺🇸</span>
-                    <div class="clock-city">New York, USA</div>
-                </div>
-                <div class="clock-time" data-timezone="America/New_York"></div>
-                <div class="clock-label">Eastern Time</div>
-                <div class="clock-weather" data-city="NewYork"></div>
-            </div>
-
-            <!-- London -->
-            <div class="clock-card">
-                <div class="clock-header">
-                    <span class="clock-flag">🇬🇧</span>
-                    <div class="clock-city">London, UK</div>
-                </div>
-                <div class="clock-time" data-timezone="Europe/London"></div>
-                <div class="clock-label">UK Time</div>
-                <div class="clock-weather" data-city="London"></div>
-            </div>
-
-            <!-- Berlin -->
-            <div class="clock-card">
-                <div class="clock-header">
-                    <span class="clock-flag">🇩🇪</span>
-                    <div class="clock-city">Berlin, Germany</div>
-                </div>
-                <div class="clock-time" data-timezone="Europe/Berlin"></div>
-                <div class="clock-label">Central Europe</div>
-                <div class="clock-weather" data-city="Berlin"></div>
-            </div>
-
-            <!-- Rome -->
-            <div class="clock-card">
-                <div class="clock-header">
-                    <span class="clock-flag">🇮🇹</span>
-                    <div class="clock-city">Rome, Italy</div>
-                </div>
-                <div class="clock-time" data-timezone="Europe/Rome"></div>
-                <div class="clock-label">Central Europe</div>
-                <div class="clock-weather" data-city="Rome"></div>
-            </div>
-
-            <!-- Moscow -->
-            <div class="clock-card">
-                <div class="clock-header">
-                    <span class="clock-flag">🇷🇺</span>
-                    <div class="clock-city">Moscow, Russia</div>
-                </div>
-                <div class="clock-time" data-timezone="Europe/Moscow"></div>
-                <div class="clock-label">Moscow Time</div>
-                <div class="clock-weather" data-city="Moscow"></div>
-            </div>
-
-        </div>
-        <p class="muted" style="margin-top:10px;">
-            Weather lines are simple static notes (no tracking, no external APIs).
-        </p>
-    </section>
-
-    <!-- CURRENCY CONVERTER -->
-    <section id="currency" class="card">
-        <h2>Currency Converter (KES ↔ USD / EUR / GBP)</h2>
-        <p class="muted">
-            Quick approximate converter for guests planning their visit.  
-            (Rates are sample values and should be updated periodically.)
-        </p>
-
-        <div class="converter-row">
-            <input type="number" id="amountInput" placeholder="Amount" />
-            <select id="fromCurrency">
-                <option value="KES">KES (Kenyan Shilling)</option>
-                <option value="USD">USD (US Dollar)</option>
-                <option value="EUR">EUR (Euro)</option>
-                <option value="GBP">GBP (Pound)</option>
-            </select>
-            <span>to</span>
-            <select id="toCurrency">
-                <option value="USD">USD (US Dollar)</option>
-                <option value="EUR">EUR (Euro)</option>
-                <option value="GBP">GBP (Pound)</option>
-                <option value="KES">KES (Kenyan Shilling)</option>
-            </select>
-            <button class="btn" id="convertBtn">Convert</button>
-        </div>
-        <div class="converter-result" id="convertResult">Result will appear here.</div>
-        <p class="muted">
-            Example rates used: 1 USD ≈ 130 KES, 1 EUR ≈ 140 KES, 1 GBP ≈ 160 KES (adjust as needed).
-        </p>
-    </section>
-
-    <!-- FAQ -->
-    <section class="card faq">
-        <h2>Frequently Asked Questions</h2>
-        <details>
-            <summary>Are you open at night?</summary>
-            <p>Yes. Bunduz Bondo Gardens operates 24 hours a day, 7 days a week.</p>
-        </details>
-        <details>
-            <summary>Do you allow professional photoshoots?</summary>
-            <p>Yes. Both professional cameras and phone photoshoots are allowed. Charges apply as per the photoshoot rate.</p>
-        </details>
-        <details>
-            <summary>Can I book a private event or surprise setup?</summary>
-            <p>Yes. You can book in advance via WhatsApp for private events, romantic setups, or small celebrations.</p>
-        </details>
-        <details>
-            <summary>Do you sell food and drinks inside the garden?</summary>
-            <p>
-                You can bring your own or order through delivery platforms like Glovo,
-                depending on availability in Bondo.
-            </p>
-        </details>
-    </section>
-
-    <!-- MAP -->
-    <section id="map" class="card map">
-        <h2>Find Us on Google Maps</h2>
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.813578476907!2d34.243209274964556!3d-0.08833559991079162!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19d55b828ff7723f%3A0xc667a3632ee6b144!2sBunduz%20Bondo%20Gardens!5e0!3m2!1sen!2ske!4v1764314573478!5m2!1sen!2ske"
-            width="100%"
-            height="350"
-            style="border:0; border-radius:14px;"
-            allowfullscreen
-            loading="lazy">
-        </iframe>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="card contact-block">
-        <h2>Contact & Reservations</h2>
-        <p><strong>Location:</strong> Bondo, Kenya</p>
-        <p><strong>Phone:</strong> +254 769 285959</p>
-        <p><strong>WhatsApp:</strong> <a href="https://wa.me/254769285959" target="_blank" rel="noopener noreferrer">Chat with us</a></p>
-        <p><strong>Hours:</strong> Open 24 Hours</p>
-        <div class="contact-actions">
-            <a class="btn" href="https://wa.me/254769285959" target="_blank" rel="noopener noreferrer">Book a Visit</a>
-            <a class="btn btn-outline" href="#map">Get Directions</a>
-        </div>
-    </section>
-</main>
-
-<!-- FOOTER -->
-<footer>
-    <p>© 2025 Bunduz Bondo Gardens — Luxury in Nature. All Rights Reserved.</p>
-    <p class="muted">
-        Simple, secure static site — ideal for HTTPS hosting and fast loading.
-    </p>
-</footer>
-
-<!-- SCRIPTS -->
-<script>
-(function () {
-    /* WORLD CLOCKS */
-    function updateClocks() {
-        var elements = document.querySelectorAll('.clock-time');
-        elements.forEach(function (el) {
-            var tz = el.getAttribute('data-timezone');
-            try {
-                var now = new Date();
-                var options = {
-                    hour: '2-digit',
-                    minute: '2-digit',
-                    second: '2-digit',
-                    hour12: false,
-                    timeZone: tz
-                };
-                el.textContent = new Intl.DateTimeFormat('en-GB', options).format(now);
-            } catch (e) {
-                el.textContent = '--:--:--';
-            }
-        });
-    }
-    updateClocks();
-    setInterval(updateClocks, 1000);
-
-    /* SIMPLE STATIC WEATHER LABELS */
-    var weatherMap = {
-        Nairobi: "24°C · Warm & clear",
-        NewYork: "18°C · Partly cloudy",
-        London: "15°C · Cloudy",
-        Berlin: "17°C · Mild & breezy",
-        Rome: "20°C · Clear skies",
-        Moscow: "10°C · Cool & calm"
-    };
-    document.querySelectorAll('.clock-weather').forEach(function (el) {
-        var cityKey = el.getAttribute('data-city');
-        if (weatherMap[cityKey]) {
-            el.textContent = weatherMap[cityKey];
-        } else {
-            el.textContent = "Weather info";
-        }
-    });
-
-    /* DARK / LIGHT THEME TOGGLE */
-    var themeToggle = document.getElementById('themeToggle');
-    function applyThemeFromStorage() {
-        var stored = localStorage.getItem('bunduz_theme');
-        if (stored === 'dark') {
-            document.body.classList.add('dark-mode');
-        } else if (stored === 'light') {
-            document.body.classList.remove('dark-mode');
-        }
-    }
-    applyThemeFromStorage();
-    themeToggle.addEventListener('click', function () {
-        document.body.classList.toggle('dark-mode');
-        var mode = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
-        localStorage.setItem('bunduz_theme', mode);
-    });
-
-    /* VISITOR COUNTER (LOCAL BROWSER ONLY) */
-    var visitCountSpan = document.getElementById('visitCount');
-    if (visitCountSpan) {
-        var count = parseInt(localStorage.getItem('bunduz_visit_count') || '0', 10);
-        count += 1;
-        localStorage.setItem('bunduz_visit_count', String(count));
-        visitCountSpan.textContent = count;
-    }
-
-    /* CURRENCY CONVERTER */
-    var rates = {
-        KES: 1,
-        USD: 130,  // 1 USD ~ 130 KES
-        EUR: 140,  // 1 EUR ~ 140 KES
-        GBP: 160   // 1 GBP ~ 160 KES
-    };
-    var amountInput = document.getElementById('amountInput');
-    var fromCurrency = document.getElementById('fromCurrency');
-    var toCurrency = document.getElementById('toCurrency');
-    var convertBtn = document.getElementById('convertBtn');
-    var convertResult = document.getElementById('convertResult');
-
-    function convertCurrency() {
-        var amount = parseFloat(amountInput.value);
-        if (isNaN(amount)) {
-            convertResult.textContent = "Please enter a valid amount.";
-            return;
-        }
-        var from = fromCurrency.value;
-        var to = toCurrency.value;
-        if (!rates[from] || !rates[to]) {
-            convertResult.textContent = "Unsupported currency.";
-            return;
-        }
-        // Convert 'from' to KES, then to 'to'
-        var amountInKES = (from === 'KES') ? amount : amount * rates[from];
-        var result;
-        if (to === 'KES') {
-            result = amountInKES;
-        } else {
-            result = amountInKES / rates[to];
-        }
-        convertResult.textContent = amount.toFixed(2) + " " + from + " ≈ " + result.toFixed(2) + " " + to;
-    }
-
-    convertBtn.addEventListener('click', convertCurrency);
-})();
-</script>
-
-</body>
-</html>
-
+            Enjoy your time at Bunduz Bondo Gardens with snacks,
