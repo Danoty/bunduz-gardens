@@ -14,7 +14,8 @@
     <meta property="og:title" content="Bunduz Bondo Gardens | Luxury Nature Retreat in Bondo" />
     <meta property="og:description" content="Serene 24/7 garden in Bondo for relaxation, photoshoots, picnics, dates and intimate events." />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://danoty.github.io/bunduz-gardens/1.jpg" />
+    <!-- use local image in the repo -->
+    <meta property="og:image" content="1.jpg" />
 
     <style>
         :root {
@@ -126,7 +127,8 @@
         /* HERO */
         header {
             height: 90vh;
-            background: url('https://danoty.github.io/bunduz-gardens/1.jpg') center/cover no-repeat;
+            /* use local image 1.jpg from the repo root */
+            background: url('1.jpg') center/cover no-repeat;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -557,12 +559,12 @@
         <h2>Premium Gallery</h2>
         <p class="muted">Real moments from Bunduz Bondo Gardens. All photos are taken within the garden.</p>
         <div class="gallery-grid">
-            <img src="https://danoty.github.io/bunduz-gardens/1.jpg" alt="Bunduz Garden Image 1">
-            <img src="https://danoty.github.io/bunduz-gardens/2.jpg" alt="Bunduz Garden Image 2">
-            <img src="https://danoty.github.io/bunduz-gardens/3.jpg" alt="Bunduz Garden Image 3">
-            <img src="https://danoty.github.io/bunduz-gardens/4.jpg" alt="Bunduz Garden Image 4">
-            <img src="https://danoty.github.io/bunduz-gardens/5.jpg" alt="Bunduz Garden Image 5">
-            <img src="https://danoty.github.io/bunduz-gardens/6.jpg" alt="Bunduz Garden Image 6">
+            <img src="1.jpg" alt="Bunduz Garden Image 1">
+            <img src="2.jpg" alt="Bunduz Garden Image 2">
+            <img src="3.jpg" alt="Bunduz Garden Image 3">
+            <img src="4.jpg" alt="Bunduz Garden Image 4">
+            <img src="5.jpg" alt="Bunduz Garden Image 5">
+            <img src="6.jpg" alt="Bunduz Garden Image 6">
         </div>
     </section>
 
@@ -613,4 +615,175 @@
     <section id="order" class="card">
         <h2>Order & Enjoy With Glovo</h2>
         <p>
-            Enjoy your time at Bunduz Bondo Gardens with snacks,
+            Enjoy your time at Bunduz Bondo Gardens with snacks, drinks or meals delivered by Glovo or your preferred service.
+            Relax in the garden while your order comes to you.
+        </p>
+        <div class="contact-actions">
+            <a class="btn btn-glovo" href="https://glovoapp.com" target="_blank" rel="noopener noreferrer">Open Glovo</a>
+            <a class="btn" href="https://wa.me/254769285959" target="_blank" rel="noopener noreferrer">Talk to Us on WhatsApp</a>
+        </div>
+        <p class="muted">
+            You can pin Bunduz Bondo Gardens as your delivery location and enjoy food while you chill.
+        </p>
+    </section>
+
+    <!-- WORLD TIME & WEATHER -->
+    <section id="worldtime" class="card">
+        <h2>World Time & Weather</h2>
+        <p class="muted">Check what time it is for our guests around the world.</p>
+        <div class="world-clock-grid" id="clockGrid">
+            <!-- Cards will be inserted by JS -->
+        </div>
+    </section>
+
+    <!-- CURRENCY CONVERTER -->
+    <section id="currency" class="card">
+        <h2>Currency Converter (KES)</h2>
+        <p class="muted">Rough guide rates for visitors. (Approximate, for quick estimation.)</p>
+        <div class="converter-row">
+            <input type="number" id="kesAmount" placeholder="Amount in KES" />
+            <span>to</span>
+            <select id="currencySelect">
+                <option value="USD">USD ($)</option>
+                <option value="EUR">EUR (€)</option>
+                <option value="GBP">GBP (£)</option>
+            </select>
+            <button class="btn" id="convertBtn" type="button">Convert</button>
+        </div>
+        <div class="converter-result" id="converterResult"></div>
+    </section>
+
+    <!-- MAP -->
+    <section id="map" class="card map">
+        <h2>Find Us in Bondo</h2>
+        <p class="muted">Locate Bunduz Bondo Gardens and plan your visit.</p>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127643.63424715803!2d34.183!3d-0.07!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sBondo!5e0!3m2!1sen!2ske!4v1700000000000"
+            width="100%"
+            height="350"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="card contact-block">
+        <h2>Contact & Booking</h2>
+        <p>Call or WhatsApp us for bookings, setups and enquiries.</p>
+        <p><strong>Phone / WhatsApp:</strong> <a href="https://wa.me/254769285959" target="_blank" rel="noopener noreferrer">+254 769 285 959</a></p>
+        <p><strong>Location:</strong> Bondo, Siaya County, Kenya</p>
+        <div class="contact-actions">
+            <a class="btn" href="https://wa.me/254769285959" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
+        </div>
+    </section>
+</main>
+
+<footer>
+    Bunduz Bondo Gardens &copy; <span id="year"></span>. Designed with love in Bondo. |
+    <a href="https://wa.me/254769285959" target="_blank" rel="noopener noreferrer">WhatsApp Us</a>
+</footer>
+
+<script>
+    // THEME TOGGLE
+    const themeToggle = document.getElementById('themeToggle');
+    const savedTheme = localStorage.getItem('bunduzTheme');
+
+    if (savedTheme === 'dark') {
+        document.body.classList.add('dark-mode');
+    }
+
+    themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        localStorage.setItem('bunduzTheme',
+            document.body.classList.contains('dark-mode') ? 'dark' : 'light'
+        );
+    });
+
+    // VISITOR COUNTER (per browser)
+    const visitSpan = document.getElementById('visitCount');
+    let visits = Number(localStorage.getItem('bunduzVisits') || 0);
+    visits += 1;
+    localStorage.setItem('bunduzVisits', visits);
+    visitSpan.textContent = visits;
+
+    // WORLD CLOCKS & SIMPLE WEATHER (static descriptions)
+    const cities = [
+        { name: 'Bondo / Nairobi', tz: 'Africa/Nairobi', flag: '🇰🇪', label: 'Local Time', weather: '🌤️ Warm & clear' },
+        { name: 'London', tz: 'Europe/London', flag: '🇬🇧', label: 'UK Time', weather: '☁️ Mild' },
+        { name: 'New York', tz: 'America/New_York', flag: '🇺🇸', label: 'USA (EST)', weather: '🌦️ Mixed clouds' },
+        { name: 'Dubai', tz: 'Asia/Dubai', flag: '🇦🇪', label: 'Gulf Time', weather: '☀️ Hot & dry' }
+    ];
+
+    const clockGrid = document.getElementById('clockGrid');
+
+    function buildClockCards() {
+        clockGrid.innerHTML = '';
+        cities.forEach((city, index) => {
+            const card = document.createElement('div');
+            card.className = 'clock-card';
+            card.innerHTML = `
+                <div class="clock-header">
+                    <span class="clock-flag">${city.flag}</span>
+                    <span class="clock-city">${city.name}</span>
+                </div>
+                <div class="clock-time" id="clock-${index}">--:--</div>
+                <div class="clock-label">${city.label}</div>
+                <div class="clock-weather">${city.weather}</div>
+            `;
+            clockGrid.appendChild(card);
+        });
+    }
+
+    function updateClocks() {
+        const now = new Date();
+        cities.forEach((city, index) => {
+            try {
+                const timeStr = now.toLocaleTimeString('en-GB', {
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    timeZone: city.tz
+                });
+                const el = document.getElementById(`clock-${index}`);
+                if (el) el.textContent = timeStr;
+            } catch (e) {
+                // fallback
+            }
+        });
+    }
+
+    buildClockCards();
+    updateClocks();
+    setInterval(updateClocks, 30000); // update every 30s
+
+    // CURRENCY CONVERTER (approximate static rates)
+    const rates = {
+        USD: 0.0075, // 1 KES ≈ 0.0075 USD
+        EUR: 0.0069,
+        GBP: 0.0059
+    };
+
+    const kesInput = document.getElementById('kesAmount');
+    const currencySelect = document.getElementById('currencySelect');
+    const convertBtn = document.getElementById('convertBtn');
+    const resultDiv = document.getElementById('converterResult');
+
+    convertBtn.addEventListener('click', () => {
+        const kes = Number(kesInput.value);
+        if (!kes) {
+            resultDiv.textContent = 'Enter a valid KES amount.';
+            return;
+        }
+        const curr = currencySelect.value;
+        const rate = rates[curr];
+        const converted = kes * rate;
+        resultDiv.textContent = `${kes.toLocaleString()} KES ≈ ${converted.toFixed(2)} ${curr}`;
+    });
+
+    // FOOTER YEAR
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
